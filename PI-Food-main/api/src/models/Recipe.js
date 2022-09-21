@@ -8,5 +8,36 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+
+    id:{
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      allowNull: false,
+      primaryKey: true
+    },
+
+    image:{
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+
+    summary:{
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+
+    healthScore:{
+      type: DataTypes.INTEGER
+    },
+
+    steps:{
+      type: DataTypes.ARRAY(DataTypes.TEXT)
+    },
+
+    createIndb:{
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true,
+    },
   });
 };
