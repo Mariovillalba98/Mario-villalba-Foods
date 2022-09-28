@@ -1,0 +1,103 @@
+.contenedor-testimonio1 {
+    width: 1170;
+    height: 1500px;
+    margin: 1px 200px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 / 35%);
+    text-decoration: none;
+}
+
+.imagen-testimonio1 {
+    height: 100%;
+    width: auto;
+    
+
+}
+
+.contenedor-texto-testimonio1 {
+  text-align: left;
+  padding: 40px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-decoration: none;
+}
+
+.nombre-testimonio1{
+font-size: 1.0rem;
+color: black;
+text-decoration: none;
+text-align-last: center;
+
+}
+
+
+
+.texto-testimonio1 {
+  font-size: 0.7rem;
+  text-align-last: center;
+  text-decoration: none;
+  
+  
+}
+
+.dietas{
+  width: 100;
+  margin-bottom: 1%;
+  color:rgb(154, 99, 45);
+}
+.button-recipe2{
+  margin-bottom: 1200px ;  
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.123);
+  border: 0px solid rgba(27, 31, 35, .15);
+  border-radius: 0px;
+  /* box-shadow: 0 3px 13px 1px rgb(0 0 0 / 50%); */
+  box-sizing: border-box;
+  color: rgb(117, 117, 117);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space:unset;
+}
+
+.button-recipe2:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-recipe2:hover {
+  background-color: rgb(154, 99, 45);
+  color: rgb(255, 255, 255)
+}
+
+.button-recipe2:focus {
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-recipe2:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-recipe2:active {
+  background-color: #000000;
+  box-shadow: rgb(0, 0, 0) 50px 0 inset;
+}

@@ -20,7 +20,7 @@ const getApi = async () => {
              image: x.image,
              summary: x.summary,
              healthScore: x.healthScore,
-             diets: x.diets.map(p => p),
+             diets: x.diets,
              steps:( x.analyzedInstructions[0]?.steps?.map(item => item.step)) //x.analyzedInstructions.map(p => p.steps),
  
              
@@ -45,7 +45,11 @@ const getDb = async () => {
             },
         }
     })
-    return dbInfo
+    
+    var dato = JSON.parse(JSON.stringify(dbInfo, null, 2))
+      dato.forEach(el=>el.diets = el.diets.map(el=> el.name))
+
+      return dato
 }
 
 const totalGet = async () => {
@@ -87,8 +91,8 @@ router.get("/diets", async(req, res) =>{
     const laApi = await getApi();
     var elementos = [
         'gluten free',
-        'lacto vegetarian',
-        'ovo vegetarian',
+        'dairy free',
+        'lacto ovo vegetarian',
         'vegan',
         'paleolithic',
         'primal',
@@ -96,7 +100,7 @@ router.get("/diets", async(req, res) =>{
         'pescatarian',
         'ketogenic',
         'vegetarian',
-        'low fodmap'
+        'fodmap friendly'
     ]
 
 
@@ -128,7 +132,7 @@ router.post("/recipes", async(req, res) => {
              healthScore,
              diets,
              steps,
-             createIndb
+             createdIndb
     } = req.body
     let recipeCreate = await Recipe.create({
         name,
@@ -136,7 +140,7 @@ router.post("/recipes", async(req, res) => {
         summary,
         healthScore,
         steps,
-        createIndb
+        createdIndb
     })
     let getDiets = await Diet.findAll({
         where: {
@@ -155,3 +159,4 @@ router.post("/recipes", async(req, res) => {
 
 
 module.exports = router;
+

@@ -1,0 +1,66 @@
+
+.landing-page{
+    
+    background-image: url('./landing.png');
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:static;
+    width: 100vw;
+    
+    
+    }
+
+    .button-recipe3{
+        margin-top: 35%;
+        appearance: none;
+        background-color: rgba(0, 0, 0, 0.123);
+        border: 0px solid rgba(27, 31, 35, .15);
+        border-radius: 0px;
+        /* box-shadow: 0 3px 13px 1px rgb(0 0 0 / 50%); */
+        box-sizing: border-box;
+        color: rgb(117, 117, 117);
+        cursor: pointer;
+        display: inline-block;
+        font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        padding: 6px 30px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        white-space:unset;
+      }
+      
+      .button-recipe3:focus:not(:focus-visible):not(.focus-visible) {
+        box-shadow: none;
+        outline: none;
+      }
+      
+      .button-recipe3:hover {
+        background-color: rgb(154, 99, 45);
+        color: rgb(255, 255, 255)
+      }
+      
+      .button-recipe3:focus {
+        box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 3px;
+        outline: none;
+      }
+      
+      .button-recipe3:disabled {
+        background-color: #94d3a2;
+        border-color: rgba(27, 31, 35, .1);
+        color: rgba(255, 255, 255, .8);
+        cursor: default;
+      }
+      
+      .button-recipe3:active {
+        background-color: #000000;
+        box-shadow: rgb(0, 0, 0) 50px 0 inset;
+      }

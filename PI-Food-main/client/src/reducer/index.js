@@ -2,7 +2,11 @@ import { stat } from "fs"
 
 const initialState = {
     recipes : [],
-    allRecipes: []
+    allRecipes: [],
+    diets:[],
+    detail:[],
+    pages: 1
+
 }
 
 function rootReducer(state = initialState, action) {
@@ -13,6 +17,14 @@ function rootReducer(state = initialState, action) {
                 recipes: action.payload,
                 allRecipes: action.payload
             }
+
+            case 'GET_DIETS':
+            return{
+                ...state,
+                diets: action.payload,
+                
+            }
+
             case "FILTER_DIETS":
                 const allRecipes = state.allRecipes
                 console.log(allRecipes)
@@ -22,22 +34,33 @@ function rootReducer(state = initialState, action) {
                     recipes: dietsFilter
                 }
 
+            case "GET_NAME_RECIPES":
+                return{
+                    ...state,
+                    recipes: action.payload
+                }
+
+            case "POST_RECIPES":
+                return{
+                    ...state
+                }    
+
             case "ORDER_BY_NAME":
                 let sortedArr = action.payload === "asc" ? state.recipes.sort(function(a, b){
-                    if (a.name > b.name) {
+                    if (a.name.toLowerCase() > b.name.toLowerCase()) {
                         return 1;
                     }
-                    if (b.name> a.name) {
+                    if (b.name.toLowerCase()> a.name.toLowerCase()) {
                         return -1;
                     }
                     return 0;
                 }) :
                 
                 state.recipes.sort(function(a,b){
-                    if (a.name > b.name) {
+                    if (a.name.toLowerCase() > b.name.toLowerCase()) {
                         return -1;
                     }
-                    if (b.name> a.name) {
+                    if (b.name.toLowerCase()> a.name.toLowerCase()) {
                         return 1;
                     }
                     return 0;
@@ -47,6 +70,11 @@ function rootReducer(state = initialState, action) {
                     recipes: sortedArr
                 }
                 
+                case "GET_DETAIL":
+                    return{
+                        ...state,
+                        detail: action.payload
+                    }
 
                 case "ORDER_BY_HEALTHSCORE":
                   let sortedArr1 = action.payload === "descendente" ?
@@ -73,6 +101,19 @@ function rootReducer(state = initialState, action) {
                         ...state,
                         recipes: sortedArr1
                     }
+
+                    case "SAVE_PAGE":
+                        return {
+                          ...state,
+                          pages: action.payload
+                        }
+
+                        case "CLEAN_FILTER":
+                            return {
+                              ...state,
+                              recipes: action.payload,
+                              detail: action.payload
+                            }
 
             default:
                 return state;

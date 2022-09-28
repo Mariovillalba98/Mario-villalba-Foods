@@ -27,16 +27,21 @@ module.exports = (sequelize) => {
     },
 
     healthScore:{
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      validate: {
+        min: 1,
+        max: 100,
+      },
     },
 
     steps:{
-      type: DataTypes.ARRAY(DataTypes.TEXT)
+      type: DataTypes.STRING
+      
     },
 
-    createIndb:{
+    createdIndb:{
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      //allowNull: false,
       defaultValue: true,
     },
   });
