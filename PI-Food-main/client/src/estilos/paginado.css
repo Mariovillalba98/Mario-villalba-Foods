@@ -1,0 +1,67 @@
+.container1{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+.contenedor1{
+
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 15px;
+    padding-top: 85px;
+}
+.button-paginado{
+    margin-top: 1%; 
+    background-color: rgba(0, 0, 0, 0.123);
+    border: 0px solid rgba(27, 31, 35, .15);
+    border-radius: 0px;
+    /* box-shadow: 0 3px 13px 1px rgb(0 0 0 / 50%); */
+    box-sizing: border-box;
+    color: rgb(117, 117, 117);
+    cursor: pointer;
+
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action:auto;
+    vertical-align: middle;
+    white-space:unset;
+  }
+  
+  .button-paginado:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .button-paginado:hover {
+    background-color: rgb(154, 99, 45);
+    color: rgb(255, 255, 255);
+  }
+  
+  .button-paginado:focus {
+    outline: none;
+    background-color: #000000;
+    color:rgb(255, 255, 255);
+  }
+  
+  .button-paginado:disabled {
+    background-color: #000000;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .button-paginado:active {
+    background-color: #000000;
+    box-shadow: rgb(0, 0, 0) 50px 0 inset;
+  }

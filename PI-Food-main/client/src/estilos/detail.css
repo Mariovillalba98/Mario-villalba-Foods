@@ -1,54 +1,10 @@
-.contenedor-testimonio1 {
-    width: 1170;
-    height: 1500px;
-    margin: 1px 200px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    box-shadow: 0 3px 13px 1px rgb(0 0 0 / 35%);
-    text-decoration: none;
-}
-
-.imagen-testimonio1 {
-    height: 100%;
-    width: auto;
-    
-
-}
-
-.contenedor-texto-testimonio1 {
-  text-align: left;
-  padding: 40px;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
-  line-height: 1.5rem;
-  text-decoration: none;
-}
-
-.nombre-testimonio1{
-font-size: 1.0rem;
-color: black;
-text-decoration: none;
-text-align-last: center;
+.elcontenedor{
+  height: 100%;
 
 }
 
 
 
-.texto-testimonio1 {
-  font-size: 0.7rem;
-  text-align-last: center;
-  text-decoration: none;
-  
-  
-}
-
-.dietas{
-  width: 100;
-  margin-bottom: 1%;
-  color:rgb(154, 99, 45);
-}
 .button-recipe2{
   margin-bottom: 1200px ;  
   appearance: none;

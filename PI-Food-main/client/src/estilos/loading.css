@@ -1,4 +1,4 @@
-.loading{
+/* .loading{
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,4 +8,15 @@
     opacity: 60%;
     
     
-}
+} */
+
+.loading{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-color: white;
+
+    
+} 
