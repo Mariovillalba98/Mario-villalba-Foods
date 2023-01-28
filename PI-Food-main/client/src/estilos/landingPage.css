@@ -1,7 +1,7 @@
 
 .landing-page{
     
-    background-image: url('./landing.png');
+    background-image: url('./fondo.png');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,18 +15,19 @@
     .button-recipe3{
         margin-top: 35%;
         appearance: none;
-        background-color: rgba(0, 0, 0, 0.123);
-        border: 0px solid rgba(27, 31, 35, .15);
-        border-radius: 0px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border: 0.2px solid rgb(184, 162, 107);
+        border-radius: 20px;
         /* box-shadow: 0 3px 13px 1px rgb(0 0 0 / 50%); */
         box-sizing: border-box;
-        color: rgb(117, 117, 117);
+        color: rgb(255, 255, 255);
         cursor: pointer;
         display: inline-block;
         font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 600;
-        line-height: 20px;
+        line-height: 30px;
+        width: 200px;
         padding: 6px 30px;
         position: relative;
         text-align: center;
@@ -36,6 +37,7 @@
         touch-action: manipulation;
         vertical-align: middle;
         white-space:unset;
+        box-shadow: 0 3px 13px 1px rgb(0 0 0 / 35%);
       }
       
       .button-recipe3:focus:not(:focus-visible):not(.focus-visible) {
@@ -44,7 +46,7 @@
       }
       
       .button-recipe3:hover {
-        background-color: rgb(154, 99, 45);
+        background-color: rgb(184, 162, 107);
         color: rgb(255, 255, 255)
       }
       

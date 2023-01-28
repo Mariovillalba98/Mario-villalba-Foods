@@ -1,10 +1,10 @@
 import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import LandingPage from "./components/LandingPage"
-import Home from './components/Home';
 import RecipesCreate from './components/RecipesCreate';
 import Detail from './components/Detail';
 import ErrorNotFound from './components/ErrorNotFound'
+import MainHome from './components/MainHome';
 import './App.css';
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <div className="contenedor-principal"> 
       <Switch>
         <Route exact path="/" component={LandingPage}/>
-        <Route exact path="/home" component={Home}/>
+        <Route exact path="/home" component={MainHome}/>
         <Route path="/form"  component={RecipesCreate} />
         <Route path = "/home/:id" component = {Detail}/>
         <Route path = '*' component = {ErrorNotFound}/>

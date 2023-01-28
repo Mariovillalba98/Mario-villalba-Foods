@@ -30,12 +30,13 @@ const getApi = async () => {
  
      return apiRecipe;
  } catch(error) {
-     console.error('Fetching the data from the API failed', error)
+     console.error("Error al obtener los datos de la api", error)
  }
 }
 
 
 const getDb = async () => {
+    try{
     const dbInfo = await Recipe.findAll({
         include:{
             model: Diet,
@@ -50,13 +51,22 @@ const getDb = async () => {
       dato.forEach(el=>el.diets = el.diets.map(el=> el.name))
 
       return dato
+ }  catch(error) {
+    console.error("Error al obtener los datos de la db", error)
+}
+
 }
 
 const totalGet = async () => {
+    try{
     const infoApi = await getApi();
     const infoDb = await getDb();
     const infoTotal = infoApi.concat(infoDb);
     return infoTotal;
+    }
+    catch (error) {
+        console.error("Error al concatenar los datos", error)
+    }
 }
 
 router.get("/recipes", async (req, res) => {
@@ -66,7 +76,7 @@ router.get("/recipes", async (req, res) => {
         let nameRecipes = await recipesTotal.filter(x => x.name.toLowerCase().includes(name.toLowerCase()));
         nameRecipes.length ? 
         res.status(200).send(nameRecipes) :
-        res.status(404).send("La receta no existe");
+        res.status(200).send(["La receta no existe"]);
 
     }
     else{

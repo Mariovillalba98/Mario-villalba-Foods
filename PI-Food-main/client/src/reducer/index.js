@@ -1,4 +1,4 @@
-import { stat } from "fs"
+
 
 const initialState = {
     recipes : [],
@@ -33,6 +33,23 @@ function rootReducer(state = initialState, action) {
                     ...state,
                     recipes: dietsFilter
                 }
+
+            // case "FILTER_BY_CREATE":
+            //     const lasRecetas = state.allRecipes
+
+            //     if (action.payload === all){
+            //         return lasRecetas
+            //     }
+            //     if(action.payload === "db"){
+            //       lasRecetas.filter(e=>e.createdIndb)
+            //     }
+            //       return{
+            //         ...state,
+            //         recipe:action.payload
+            //       }
+                   
+            //     }
+                
 
             case "GET_NAME_RECIPES":
                 return{
